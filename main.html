@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./css/css.css">
+    <script type="text/javascript" src="./js/ui_manager.js"></script>  
+    <title>Farmlestus</title>
+</head>
+
+<body>
+
+    <div id="tech" class="fl20">
+            <button id="buildings_button" class="box_title_twin" type="button">Technologies</button>
+            <div id="tech_list">
+                    <button class="box_button" type="button" onclick="">Structure</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Conventional weapons</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Conventional propulsion</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Laser</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">EM impulsion</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Plasma</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Hyperspace propulsion</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Energy</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Security</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Spying</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Data processing</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Quantum computing</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Conscription</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Strategy</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Superstructure</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Exploitation</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Terraformation</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Mastery of space</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Mastery of matter</button>
+                    <span id="owned" class="box">10</span>
+                    <button class="box_button" type="button" onclick="">Mastery of time</button>
+                    <span id="owned" class="box">10</span>
+                </div>
+    </div>
+
+    <div id="main" class="mid60">
+    </div>
+
+    <div id="build" class="fr20">
+        <button id="buildings_button" class="box_title_twin" type="button" onclick="UI_ShowAndHide('building_list','ships_list')">Buildings</button>
+        <button id="ships_button" class="box_title_twin" type="button" onclick="UI_ShowAndHide('ships_list','building_list')">Ships</button>
+        <div id="building_list">
+            <button class="box_button" type="button" onclick="">Metal mine</button>
+            <span id="owned" class="box">10</span>
+            <button class="box_button" type="button" onclick="">Tritium mine</button>
+            <span id="owned" class="box">10</span>
+            <button class="box_button" type="button" onclick="">Power plant</button>
+            <span id="owned" class="box">10</span>
+            <button class="box_button" type="button" onclick="">Concentrator</button>
+            <span id="owned" class="box">10</span>
+        </div>
+
+        <div id="ships_list">
+            <button class="box_button" type="button" onclick="">Mining module</button>
+            <span id="owned" class="box">10</span>
+            <button class="box_button" type="button" onclick="">Mobile concentrator</button>
+            <span id="owned" class="box">10</span>
+        </div>
+        <script>UI_OnStart();</script>
+
+
+    </div>
+
+
+</html>

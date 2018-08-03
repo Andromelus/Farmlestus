@@ -1,0 +1,52 @@
+DIV.fl20 {
+	width: 20%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+DIV.mid60 {
+	width: 60%;
+	height: 100%;
+    position: fixed;
+    top: 0px;
+	left: 20%;
+}
+DIV.fr20 {
+	width: 20%;
+	height: 100%;
+    position: fixed;
+    top: 0px;
+	left: 80%;
+}
+
+body {
+    background-image: url("../img/Back.jpg")
+}
+
+.box {
+    box-shadow: inset 0px 0px 45px rgba(0, 186, 255, 0.4);
+    color: #6dcaf4;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #37393c;
+    border-radius: 3px;
+}
+
+.box_button {
+    width: 80%;
+    border-radius: 12px;
+    text-align: left;   
+    margin: 5px;
+}
+
+.box_title_twin {
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #04577c;
+    display:inline; 
+    font-size:25px;
+}
+
+
