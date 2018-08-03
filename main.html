@@ -6,54 +6,55 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="./css/css.css">
     <script type="text/javascript" src="./js/ui_manager.js"></script>  
+    <script type="text/javascript" src="./js/data.js"></script> 
     <title>Farmlestus</title>
 </head>
 
 <body>
-
+    <script>DATA_OnStart();</script>
     <div id="tech" class="fl20">
             <button id="buildings_button" class="box_title_twin" type="button">Technologies</button>
             <div id="tech_list">
                     <button class="box_button" type="button" onclick="">Structure</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_struct" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Conventional weapons</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_conv_weap" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Conventional propulsion</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_conv_prop" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Laser</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_laser" class="box">10</span>
                     <button class="box_button" type="button" onclick="">EM impulsion</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_em_imp" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Plasma</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_plasma" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Hyperspace propulsion</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_hyper_prop" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Energy</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_energy" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Security</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_secu" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Spying</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_spy" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Data processing</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_data_proc" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Quantum computing</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_quant_proc" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Conscription</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_consc" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Strategy</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_strat" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Superstructure</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_superstruct" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Exploitation</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_exploit" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Terraformation</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_terra" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Mastery of space</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_mos" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Mastery of matter</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_mom" class="box">10</span>
                     <button class="box_button" type="button" onclick="">Mastery of time</button>
-                    <span id="owned" class="box">10</span>
+                    <span id="qtt_mot" class="box">10</span>
                 </div>
     </div>
 
@@ -69,10 +70,10 @@
                       <th>Energy</th>
                     </tr>
                     <tr>
-                      <td>10</td>
-                      <td>10</td>
-                      <td>10</td>
-                      <td>1000000000000000</td>
+                      <td id="qtt_met">10</td>
+                      <td id="qtt_tri">10</td>
+                      <td id="qtt_pps">10</td>
+                      <td id="qtt_energy">1000000000000000</td>
                     </tr>
 
                   </table> 
@@ -83,20 +84,20 @@
         <button id="ships_button" class="box_title_twin" type="button" onclick="UI_ShowAndHide('ships_list','building_list')">Ships</button>
         <div id="building_list">
             <button class="box_button" type="button" onclick="">Metal mine</button>
-            <span id="owned" class="box">10</span>
+            <span id="qtt_build_met" class="box">10</span>
             <button class="box_button" type="button" onclick="">Tritium mine</button>
-            <span id="owned" class="box">10</span>
+            <span id="qtt_build_tri" class="box">10</span>
             <button class="box_button" type="button" onclick="">Power plant</button>
-            <span id="owned" class="box">10</span>
+            <span id="qtt_build_power" class="box">10</span>
             <button class="box_button" type="button" onclick="">Concentrator</button>
-            <span id="owned" class="box">10</span>
+            <span id="qtt_build_conc" class="box">10</span>
         </div>
 
         <div id="ships_list">
             <button class="box_button" type="button" onclick="">Mining module</button>
-            <span id="owned" class="box">10</span>
+            <span id="qtt_mm" class="box">10</span>
             <button class="box_button" type="button" onclick="">Mobile concentrator</button>
-            <span id="owned" class="box">10</span>
+            <span id="qtt_mconc" class="box">10</span>
         </div>
         <script>UI_OnStart();</script>
 
