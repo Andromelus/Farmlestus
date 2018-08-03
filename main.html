@@ -5,101 +5,108 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="./css/css.css">
-    <script type="text/javascript" src="./js/ui_manager.js"></script>  
-    <script type="text/javascript" src="./js/data.js"></script> 
+    <script type="text/javascript" src="./js/ui_manager.js"></script>
+    <script type="text/javascript" src="./js/data.js"></script>
+    <script type="text/javascript" src="./js/calculation_engine.js"></script>
     <title>Farmlestus</title>
 </head>
 
 <body>
     <script>DATA_OnStart();</script>
     <div id="tech" class="fl20">
-            <button id="buildings_button" class="box_title_twin" type="button">Technologies</button>
-            <div id="tech_list">
-                    <button class="box_button" type="button" onclick="">Structure</button>
-                    <span id="qtt_struct" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Conventional weapons</button>
-                    <span id="qtt_conv_weap" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Conventional propulsion</button>
-                    <span id="qtt_conv_prop" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Laser</button>
-                    <span id="qtt_laser" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">EM impulsion</button>
-                    <span id="qtt_em_imp" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Plasma</button>
-                    <span id="qtt_plasma" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Hyperspace propulsion</button>
-                    <span id="qtt_hyper_prop" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Energy</button>
-                    <span id="qtt_energy" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Security</button>
-                    <span id="qtt_secu" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Spying</button>
-                    <span id="qtt_spy" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Data processing</button>
-                    <span id="qtt_data_proc" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Quantum computing</button>
-                    <span id="qtt_quant_proc" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Conscription</button>
-                    <span id="qtt_consc" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Strategy</button>
-                    <span id="qtt_strat" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Superstructure</button>
-                    <span id="qtt_superstruct" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Exploitation</button>
-                    <span id="qtt_exploit" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Terraformation</button>
-                    <span id="qtt_terra" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Mastery of space</button>
-                    <span id="qtt_mos" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Mastery of matter</button>
-                    <span id="qtt_mom" class="box">10</span>
-                    <button class="box_button" type="button" onclick="">Mastery of time</button>
-                    <span id="qtt_mot" class="box">10</span>
-                </div>
+        <button id="buildings_button" class="box_title_twin" type="button">Technologies</button>
+        <div id="tech_list">
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'structure')">Structure</button>
+            <span id="qtt_struct" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'conv_weap')">Conventional weapons</button>
+            <span id="qtt_conv_weap" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'conv_prop')">Conventional propulsion</button>
+            <span id="qtt_conv_prop" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'laser')">Laser</button>
+            <span id="qtt_laser" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'em_imp')">EM impulsion</button>
+            <span id="qtt_em_imp" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'plasma')">Plasma</button>
+            <span id="qtt_plasma" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'hyper_prop')">Hyperspace propulsion</button>
+            <span id="qtt_hyper_prop" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'energy')">Energy</button>
+            <span id="qtt_energy" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'secu')">Security</button>
+            <span id="qtt_secu" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'spy')">Spying</button>
+            <span id="qtt_spy" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'data_proc')">Data processing</button>
+            <span id="qtt_data_proc" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'quant_com')">Quantum computing</button>
+            <span id="qtt_quant_proc" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'cons')">Conscription</button>
+            <span id="qtt_consc" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'strat')">Strategy</button>
+            <span id="qtt_strat" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'superstruct')">Superstructure</button>
+            <span id="qtt_superstruct" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'exploit')">Exploitation</button>
+            <span id="qtt_exploit" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'terra')">Terraformation</button>
+            <span id="qtt_terra" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'mos')">Mastery of space</button>
+            <span id="qtt_mos" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'mom')">Mastery of matter</button>
+            <span id="qtt_mom" class="box">10</span>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelTech(document.getElementById('multiplicator').value, 'mot')">Mastery of time</button>
+            <span id="qtt_mot" class="box">10</span>
+        </div>
     </div>
 
     <div id="main" class="mid60">
-            <button  class="box_title_twin" type="button" >Your planet</button>
-            <img align="middle" class="img_main" src="./img/MC1_5_2.png" alt="Your planet" onclick="doit();"> 
+        <button class="box_title_twin" type="button">Your planet</button>
+        <img align="middle" class="img_main" src="./img/MC1_5_2.png" alt="Your planet" onclick="CALCUL_ClickIncome(tech_data, building_data, ships_data, res);">
 
-            <table align="center">
-                    <tr>
-                      <th>Metal</th>
-                      <th>Tritium</th>
-                      <th>Energy cell</th>
-                      <th>Energy</th>
-                    </tr>
-                    <tr>
-                      <td id="qtt_met">10</td>
-                      <td id="qtt_tri">10</td>
-                      <td id="qtt_pps">10</td>
-                      <td id="qtt_energy">1000000000000000</td>
-                    </tr>
+        <table align="center">
+            <tr>
+                <th>Metal</th>
+                <th>Tritium</th>
+                <th>Energy cell</th>
+                <th>Energy</th>
+            </tr>
+            <tr>
+                <td id="qtt_res_met">10</td>
+                <td id="qtt_res_tri">10</td>
+                <td id="qtt_res_pps">10</td>
+                <td id="qtt_res_energy">1000000000000000</td>
+            </tr>
+        </table>
 
-                  </table> 
+        <p class="box" align="middle">Multiplicator</p>
+        <select id="multiplicator">
+                <option value="1">1</option>
+                <option value="10">10</option>
+                <option value="100">100</option>
+              </select>
     </div>
 
     <div id="build" class="fr20">
         <button id="buildings_button" class="box_title_twin" type="button" onclick="UI_ShowAndHide('building_list','ships_list')">Buildings</button>
         <button id="ships_button" class="box_title_twin" type="button" onclick="UI_ShowAndHide('ships_list','building_list')">Ships</button>
         <div id="building_list">
-            <button class="box_button" type="button" onclick="">Metal mine</button>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelBuildings(document.getElementById('multiplicator').value, 'metal')">Metal mine</button>
             <span id="qtt_build_met" class="box">10</span>
-            <button class="box_button" type="button" onclick="">Tritium mine</button>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelBuildings(document.getElementById('multiplicator').value, 'tritium')">Tritium mine</button>
             <span id="qtt_build_tri" class="box">10</span>
-            <button class="box_button" type="button" onclick="">Power plant</button>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelBuildings(document.getElementById('multiplicator').value, 'power')">Power plant</button>
             <span id="qtt_build_power" class="box">10</span>
-            <button class="box_button" type="button" onclick="">Concentrator</button>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelBuildings(document.getElementById('multiplicator').value, 'conc')">Concentrator</button>
             <span id="qtt_build_conc" class="box">10</span>
         </div>
 
         <div id="ships_list">
-            <button class="box_button" type="button" onclick="">Mining module</button>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelShips(document.getElementById('multiplicator').value, 'mm')">Mining module</button>
             <span id="qtt_mm" class="box">10</span>
-            <button class="box_button" type="button" onclick="">Mobile concentrator</button>
+            <button class="box_button" type="button" onclick="DATA_IncreaseLevelShips(document.getElementById('multiplicator').value, 'mconc')">Mobile concentrator</button>
             <span id="qtt_mconc" class="box">10</span>
         </div>
-        <script>UI_OnStart();</script>
+        <script>UI_OnStart(tech_data, building_data, ships_data, res);</script>
 
 
     </div>

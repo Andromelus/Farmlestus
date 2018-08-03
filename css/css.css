@@ -34,6 +34,16 @@ body {
     border-radius: 3px;
 }
 
+P.box {
+    box-shadow: inset 0px 0px 45px rgba(0, 186, 255, 0.4);
+    color: #6dcaf4;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #37393c;
+    border-radius: 3px;
+    width: 10%;
+}
+
 .box_button {
     width: 80%;
     border-radius: 12px;
