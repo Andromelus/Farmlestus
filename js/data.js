@@ -1,43 +1,43 @@
 var tech_data = {
-    "structure":null,
-    "conv_weap":null,
-    "conv_prop":null,
-    "laser":null,
-    "em_imp":null,
-    "plasma":null,
-    "hyper_prop":null,
-    "energy":null,
-    "secu":null,
-    "spy":null,
-    "data_proc":null,
-    "quant_com":null,
-    "cons":null,
-    "strat":null,
-    "superstruct":null,
-    "exploit":null,
-    "terra":null,
-    "mos":null,
-    "mom":null,
-    "mot":null
+    "structure": null,
+    "conv_weap": null,
+    "conv_prop": null,
+    "laser": null,
+    "em_imp": null,
+    "plasma": null,
+    "hyper_prop": null,
+    "energy": null,
+    "secu": null,
+    "spy": null,
+    "data_proc": null,
+    "quant_com": null,
+    "cons": null,
+    "strat": null,
+    "superstruct": null,
+    "exploit": null,
+    "terra": null,
+    "mos": null,
+    "mom": null,
+    "mot": null
 };
 
 var building_data = {
-    "metal":null,
-    "tritium":null,
-    "power":null,
-    "conc":null,
+    "metal": null,
+    "tritium": null,
+    "power": null,
+    "conc": null,
 };
 
 var ships_data = {
-    "mm":null,
-    "mconc":null,
+    "mm": null,
+    "mconc": null,
 };
 
 var res = {
-    "met":null,
-    "tri":null,
-    "pps":null,
-    "energy":null
+    "met": null,
+    "tri": null,
+    "pps": null,
+    "energy": null
 }
 
 var basePriceMet = {
@@ -146,9 +146,9 @@ var basePricePp = {
 var initialStart = false;
 var hasLocalStorage = false;
 
-function DATA_OnStart(){
-    if (typeof(Storage) !== "undefined") {
-        if (localStorage.farmlestus === true){
+function DATA_OnStart() {
+    if (typeof (Storage) !== "undefined") {
+        if (localStorage.farmlestus === true) {
             hasLocalStorage = true;
             tech_data.structure = localStorage.structure;
             tech_data.conv_weap = localStorage.conv_weap;
@@ -213,23 +213,56 @@ function DATA_OnStart(){
             res.energy = 0;
             console.log("nothing in storage found, set data to basic")
         }
-    initialStart = true;
+        initialStart = true;
     } else {
         console.log("ERROR: NO LOCAL STORAGE SUPPORTED")
     }
 }
 
 
-function DATA_IncreaseLevelTech(qtt_level, el_to_up){
+function DATA_IncreaseLevelTech(qtt_level, el_to_up) {
     tech_data[el_to_up] += parseInt(qtt_level);
     UI_SetUIValues(tech_data, building_data, ships_data, res);
 }
 
-function DATA_IncreaseLevelBuildings(qtt_level, el_to_up){
+function DATA_IncreaseLevelBuildings(qtt_level, el_to_up) {
     building_data[el_to_up] += parseInt(qtt_level);
     UI_SetUIValues(tech_data, building_data, ships_data, res);
 }
-function DATA_IncreaseLevelShips(qtt_level, el_to_up){
+function DATA_IncreaseLevelShips(qtt_level, el_to_up) {
     ships_data[el_to_up] += parseInt(qtt_level);
     UI_SetUIValues(tech_data, building_data, ships_data, res);
+}
+
+function DATA_EstimatePriceTech(el_to_est, level_to_add) {
+    var current_level = tech_data[el_to_est];
+
+    var t_price_m = basePriceMet[el_to_est];
+    var t_price_t = basePricetri[el_to_est];
+    var t_price_p = basePricePp[el_to_est];
+    for (let i = 0; i <= current_level; i++) {
+        t_price_m = t_price_m * 1.7;
+        t_price_t = t_price_t * 1.7;
+        t_price_p = t_price_p * 1.7;
+    }
+
+    var origin_met_price = t_price_m;
+    var origin_tri_price = t_price_t;
+    var origin_pp_price = t_price_p;
+
+    for (let i = 0; i <= level_to_add - current_level; i++) {
+        t_price_m = t_price_m * 1.7;
+        t_price_t = t_price_t * 1.7;
+        t_price_p = t_price_p * 1.7;
+    }
+
+    var final_met_price = t_price_m;
+    var final_tri_price = t_price_t;
+    var final_pp_price = t_price_p;
+
+    if (res.met <= (final_met_price - origin_met_price) && res.tri <= (final_tri_price - origin_tri_price) && res.pp <= (final_pp_price - origin_pp_price)){
+        console.log("ok")
+    } else {
+        console.log("pas ok");
+    }
 }
