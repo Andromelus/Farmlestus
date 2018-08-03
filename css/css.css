@@ -10,7 +10,8 @@ DIV.mid60 {
 	height: 100%;
     position: fixed;
     top: 0px;
-	left: 20%;
+    left: 20%;
+    text-align: center;
 }
 DIV.fr20 {
 	width: 20%;
@@ -48,5 +49,23 @@ body {
     display:inline; 
     font-size:25px;
 }
+
+.img_main{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 400px;
+}
+
+th{
+    box-shadow: inset 0px 0px 45px rgba(0, 186, 255, 0.4);
+    color: #6dcaf4;
+}
+tr {
+    box-shadow: inset 0px 0px 45px rgba(0, 186, 255, 0.4);
+    color: #6dcaf4;
+}
+
 
 

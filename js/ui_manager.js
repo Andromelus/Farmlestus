@@ -8,3 +8,7 @@ function UI_ShowAndHide(nameElToShow, nameElToHide) {
 function UI_OnStart(){
     document.getElementById("ships_list").style.display = "none";
 }
+
+function doit(){
+    console.log("did it");
+}
