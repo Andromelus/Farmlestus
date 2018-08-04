@@ -7,110 +7,143 @@ function UI_ShowAndHide(nameElToShow, nameElToHide) {
 
 function UI_OnStart(tech_data, building_data, ships_data, res){
     document.getElementById("ships_list").style.display = "none";
+    document.getElementById("info").style.display = "none";
     GetDom();
     UI_SetUIValues(tech_data, building_data, ships_data, res);
 }
 
 var doms = {
-    "qtt_struct": null,
-    "qtt_conv_weap":null,
-    "qtt_conv_prop":null,
-    "qtt_laser":null,
-    "qtt_em_imp":null,
-    "qtt_plasma":null,
-    "qtt_hyper_prop":null,
-    "qtt_energy":null,
-    "qtt_secu":null,
-    "qtt_spy":null,
-    "qtt_data_proc":null,
-    "qtt_quant_proc":null,
-    "qtt_consc":null,
-    "qtt_strat":null,
-    "qtt_superstruct":null,
-    "qtt_exploit":null,
-    "qtt_terra":null,
-    "qtt_mos":null,
-    "qtt_mom":null,
-    "qtt_mot":null,
-    "qtt_met":null,
-    "qtt_tri":null,
-    "qtt_pps":null,
-    "qtt_res_energy":null,
-    "qtt_build_met":null,
-    "qtt_build_tri":null,
-    "qtt_build_power":null,
-    "qtt_build_conc":null,
-    "qtt_mm":null,
-    "qtt_mconc":null
+    "t_struct": null,
+    "t_conv_weap":null,
+    "t_conv_prop":null,
+    "t_laser":null,
+    "t_em_imp":null,
+    "t_plasma":null,
+    "t_hyper_prop":null,
+    "t_energy":null,
+    "t_secu":null,
+    "t_spy":null,
+    "t_data_proc":null,
+    "t_quant_proc":null,
+    "t_consc":null,
+    "t_strat":null,
+    "t_superstruct":null,
+    "t_exploit":null,
+    "t_terra":null,
+    "t_mos":null,
+    "t_mom":null,
+    "t_mot":null,
+    "r_met":null,
+    "r_tri":null,
+    "r_pps":null,
+    "r_energy":null,
+    "b_met":null,
+    "b_tri":null,
+    "b_power":null,
+    "b_conc":null,
+    "s_mm":null,
+    "s_mconc":null,
+    "info_title":null,
+    "info":null,
+    "i_met":null,
+    "i_tri":null,
+    "i_pp":null
 };
 
 function GetDom(){
-    doms.qtt_struct = document.getElementById("qtt_struct");
-    doms.qtt_conv_weap = document.getElementById("qtt_conv_weap");
-    doms.qtt_conv_prop = document.getElementById("qtt_conv_prop");
-    doms.qtt_laser = document.getElementById("qtt_laser");
-    doms.qtt_em_imp = document.getElementById("qtt_em_imp");
-    doms.qtt_plasma = document.getElementById("qtt_plasma");
-    doms.qtt_hyper_prop = document.getElementById("qtt_hyper_prop");
-    doms.qtt_energy = document.getElementById("qtt_energy");
-    doms.qtt_secu = document.getElementById("qtt_secu");
-    doms.qtt_spy = document.getElementById("qtt_spy");
-    doms.qtt_data_proc = document.getElementById("qtt_data_proc");
-    doms.qtt_quant_proc = document.getElementById("qtt_quant_proc");
-    doms.qtt_consc = document.getElementById("qtt_consc");
-    doms.qtt_strat = document.getElementById("qtt_strat");
-    doms.qtt_superstruct = document.getElementById("qtt_superstruct");
-    doms.qtt_exploit = document.getElementById("qtt_exploit");
-    doms.qtt_terra = document.getElementById("qtt_terra");
-    doms.qtt_mos = document.getElementById("qtt_mos");
-    doms.qtt_mom = document.getElementById("qtt_mom");
-    doms.qtt_mot = document.getElementById("qtt_mot");
-    doms.qtt_met = document.getElementById("qtt_res_met");
-    doms.qtt_tri = document.getElementById("qtt_res_tri");
-    doms.qtt_pps = document.getElementById("qtt_res_pps");
-    doms.qtt_res_energy = document.getElementById("qtt_res_energy");
-    doms.qtt_build_met = document.getElementById("qtt_build_met");
-    doms.qtt_build_tri = document.getElementById("qtt_build_tri");
-    doms.qtt_build_power = document.getElementById("qtt_build_power");
-    doms.qtt_build_conc = document.getElementById("qtt_build_conc");
-    doms.qtt_mm = document.getElementById("qtt_mm");
-    doms.qtt_mconc = document.getElementById("qtt_mconc");
+    doms.t_struct = document.getElementById("t_struct");
+    doms.t_conv_weap = document.getElementById("t_conv_weap");
+    doms.t_conv_prop = document.getElementById("t_conv_prop");
+    doms.t_laser = document.getElementById("t_laser");
+    doms.t_em_imp = document.getElementById("t_em_imp");
+    doms.t_plasma = document.getElementById("t_plasma");
+    doms.t_hyper_prop = document.getElementById("t_hyper_prop");
+    doms.t_energy = document.getElementById("t_energy");
+    doms.t_secu = document.getElementById("t_secu");
+    doms.t_spy = document.getElementById("t_spy");
+    doms.t_data_proc = document.getElementById("t_data_proc");
+    doms.t_quant_proc = document.getElementById("t_quant_proc");
+    doms.t_consc = document.getElementById("t_consc");
+    doms.t_strat = document.getElementById("t_strat");
+    doms.t_superstruct = document.getElementById("t_superstruct");
+    doms.t_exploit = document.getElementById("t_exploit");
+    doms.t_terra = document.getElementById("t_terra");
+    doms.t_mos = document.getElementById("t_mos");
+    doms.t_mom = document.getElementById("t_mom");
+    doms.t_mot = document.getElementById("t_mot");
+    doms.r_met = document.getElementById("r_met");
+    doms.r_tri = document.getElementById("r_tri");
+    doms.r_pps = document.getElementById("r_pps");
+    doms.r_energy = document.getElementById("r_energy");
+    doms.b_met = document.getElementById("b_met");
+    doms.b_tri = document.getElementById("b_tri");
+    doms.b_power = document.getElementById("b_power");
+    doms.b_conc = document.getElementById("b_conc");
+    doms.s_mm = document.getElementById("s_mm");
+    doms.s_mconc = document.getElementById("s_mconc");
+    doms.info_title= document.getElementById("info_title");
+    doms.info = document.getElementById("info");
+    doms.i_met = document.getElementById("i_met");
+    doms.i_tri = document.getElementById("i_tri");
+    doms.i_pp = document.getElementById("i_pp");
+
 }
 
 function UI_SetUIValues(tech_data, building_data, ships_data, res) {
-    doms.qtt_struct.innerHTML = tech_data.structure;
-    doms.qtt_conv_weap.innerHTML = tech_data.conv_weap;
-    doms.qtt_conv_prop.innerHTML = tech_data.conv_prop;
-    doms.qtt_laser.innerHTML = tech_data.laser;
-    doms.qtt_em_imp.innerHTML = tech_data.em_imp;
+    doms.t_struct.innerHTML = tech_data.t_struct;
+    doms.t_conv_weap.innerHTML = tech_data.t_conv_weap;
+    doms.t_conv_prop.innerHTML = tech_data.t_conv_prop;
+    doms.t_laser.innerHTML = tech_data.t_laser;
+    doms.t_em_imp.innerHTML = tech_data.t_em_imp;
 
-    doms.qtt_plasma.innerHTML = tech_data.plasma;
-    doms.qtt_hyper_prop.innerHTML = tech_data.hyper_prop;
-    doms.qtt_spy.innerHTML = tech_data.spy;
-    doms.qtt_data_proc.innerHTML = tech_data.data_proc;
-    doms.qtt_quant_proc.innerHTML = tech_data.quant_com;
-    doms.qtt_secu.innerHTML = tech_data.secu;
-    doms.qtt_energy.innerHTML = tech_data.energy;
+    doms.t_plasma.innerHTML = tech_data.t_plasma;
+    doms.t_hyper_prop.innerHTML = tech_data.t_hyper_prop;
+    doms.t_spy.innerHTML = tech_data.t_spy;
+    doms.t_data_proc.innerHTML = tech_data.t_data_proc;
+    doms.t_quant_proc.innerHTML = tech_data.t_quant_com;
+    doms.t_secu.innerHTML = tech_data.t_secu;
+    doms.t_energy.innerHTML = tech_data.t_energy;
 
-    doms.qtt_consc.innerHTML = tech_data.cons;
-    doms.qtt_strat.innerHTML = tech_data.strat;
-    doms.qtt_superstruct.innerHTML = tech_data.superstruct;
-    doms.qtt_exploit.innerHTML = tech_data.exploit;
-    doms.qtt_terra.innerHTML = tech_data.terra;
+    doms.t_consc.innerHTML = tech_data.t_cons;
+    doms.t_strat.innerHTML = tech_data.t_strat;
+    doms.t_superstruct.innerHTML = tech_data.t_superstruct;
+    doms.t_exploit.innerHTML = tech_data.t_exploit;
+    doms.t_terra.innerHTML = tech_data.t_terra;
 
-    doms.qtt_mos.innerHTML = tech_data.mos;
-    doms.qtt_mom.innerHTML = tech_data.mom;
-    doms.qtt_mot.innerHTML = tech_data.mot;
-    doms.qtt_build_met.innerHTML = building_data.metal;
-    doms.qtt_build_tri.innerHTML = building_data.tritium;
+    doms.t_mos.innerHTML = tech_data.t_mos;
+    doms.t_mom.innerHTML = tech_data.t_mom;
+    doms.t_mot.innerHTML = tech_data.t_mot;
+    doms.b_met.innerHTML = building_data.b_metal;
+    doms.b_tri.innerHTML = building_data.b_tritium;
 
-    doms.qtt_build_power.innerHTML = building_data.power;
-    doms.qtt_build_conc.innerHTML = building_data.conc;
-    doms.qtt_mm.innerHTML = ships_data.mm;
-    doms.qtt_mconc.innerHTML = ships_data.mconc;
-    doms.qtt_met.innerHTML = res.met;
+    doms.b_power.innerHTML = building_data.b_power;
+    doms.b_conc.innerHTML = building_data.b_conc;
+    doms.s_mm.innerHTML = ships_data.s_mm;
+    doms.s_mconc.innerHTML = ships_data.s_mconc;
+    doms.r_met.innerHTML = res.r_met;
 
-    doms.qtt_tri.innerHTML = res.tri;
-    doms.qtt_pps.innerHTML = res.pps;
-    doms.qtt_res_energy.innerHTML = res.energy;
+    doms.r_tri.innerHTML = res.r_tri;
+    doms.r_pps.innerHTML = res.r_pps;
+    doms.r_energy.innerHTML = res.r_energy;
+}
+
+function UI_DisplayInfoTech(el_info, multiplicator){
+    var info = CALCUL_EstimatePriceTech(el_info, multiplicator);
+    doms.i_met.innerHTML = info.met;
+    doms.i_tri.innerHTML = info.tri;
+    doms.i_pp.innerHTML = info.pp;
+    doms.info_title.innerHTML = "Required resources";
+    document.getElementById("info").style.display = "block";
+}
+
+function UI_CloseInfo(){
+    document.getElementById("info").style.display = "none";
+}
+
+function UI_DisplayResourcesMissing(met, tri, pp){
+    doms.i_met.innerHTML = met;
+    doms.i_tri.innerHTML = tri;
+    doms.i_pp.innerHTML = pp;
+    doms.info_title.innerHTML = "Missing resources";
+    document.getElementById("info").style.display = "block";
 }

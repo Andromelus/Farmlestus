@@ -1,43 +1,43 @@
 var tech_data = {
-    "structure": null,
-    "conv_weap": null,
-    "conv_prop": null,
-    "laser": null,
-    "em_imp": null,
-    "plasma": null,
-    "hyper_prop": null,
-    "energy": null,
-    "secu": null,
-    "spy": null,
-    "data_proc": null,
-    "quant_com": null,
-    "cons": null,
-    "strat": null,
-    "superstruct": null,
-    "exploit": null,
-    "terra": null,
-    "mos": null,
-    "mom": null,
-    "mot": null
+    "t_struct": null,
+    "t_conv_weap": null,
+    "t_conv_prop": null,
+    "t_laser": null,
+    "t_em_imp": null,
+    "t_plasma": null,
+    "t_hyper_prop": null,
+    "t_energy": null,
+    "t_secu": null,
+    "t_spy": null,
+    "t_data_proc": null,
+    "t_quant_com": null,
+    "t_cons": null,
+    "t_strat": null,
+    "t_superstruct": null,
+    "t_exploit": null,
+    "t_terra": null,
+    "t_mos": null,
+    "t_mom": null,
+    "t_mot": null
 };
 
 var building_data = {
-    "metal": null,
-    "tritium": null,
-    "power": null,
-    "conc": null,
+    "b_metal": null,
+    "b_tritium": null,
+    "b_power": null,
+    "b_conc": null,
 };
 
 var ships_data = {
-    "mm": null,
-    "mconc": null,
+    "s_mm": null,
+    "s_mconc": null,
 };
 
 var res = {
-    "met": null,
-    "tri": null,
-    "pps": null,
-    "energy": null
+    "r_met": null,
+    "r_tri": null,
+    "r_pps": null,
+    "r_energy": null
 }
 
 var basePriceMet = {
@@ -150,67 +150,67 @@ function DATA_OnStart() {
     if (typeof (Storage) !== "undefined") {
         if (localStorage.farmlestus === true) {
             hasLocalStorage = true;
-            tech_data.structure = localStorage.structure;
-            tech_data.conv_weap = localStorage.conv_weap;
-            tech_data.conv_prop = localStorage.conv_prop;
-            tech_data.laser = localStorage.laser;
-            tech_data.em_imp = localStorage.em_imp;
-            tech_data.plasma = localStorage.plasma;
-            tech_data.hyper_prop = localStorage.hyper_prop;
-            tech_data.energy = localStorage.energy;
-            tech_data.secu = localStorage.secu;
-            tech_data.spy = localStorage.spy;
-            tech_data.data_proc = localStorage.data_proc;
-            tech_data.quant_com = localStorage.quant_com;
-            tech_data.cons = localStorage.cons;
-            tech_data.strat = localStorage.strat;
-            tech_data.superstruct = localStorage.superstruct;
-            tech_data.exploit = localStorage.exploit;
-            tech_data.terra = localStorage.terra;
-            tech_data.mos = localStorage.mos;
-            tech_data.mom = localStorage.mom;
-            tech_data.mot = localStorage.mot;
-            building_data.metal = localStorage.metal;
-            building_data.tritium = localStorage.tritium;
-            building_data.power = localStorage.power;
-            building_data.conc = localStorage.conc;
-            ships_data.mm = localStorage.mm;
-            ships_data.mconc = localStorage.mconc;
-            res.met = localStorage.met;
-            res.tri = localStorage.tri;
-            res.pps = localStorage.pps;
-            res.energy = localStorage.energy;
+            tech_data.t_struct = localStorage.t_struct;
+            tech_data.t_conv_weap = localStorage.t_conv_weap;
+            tech_data.t_conv_prop = localStorage.t_conv_prop;
+            tech_data.t_laser = localStorage.t_laser;
+            tech_data.t_em_imp = localStorage.t_em_imp;
+            tech_data.t_plasma = localStorage.t_plasma;
+            tech_data.t_hyper_prop = localStorage.t_hyper_prop;
+            tech_data.t_energy = localStorage.t_energy;
+            tech_data.t_secu = localStorage.t_secu;
+            tech_data.t_spy = localStorage.t_spy;
+            tech_data.t_data_proc = localStorage.t_data_proc;
+            tech_data.t_quant_com = localStorage.t_quant_com;
+            tech_data.t_cons = localStorage.t_cons;
+            tech_data.t_strat = localStorage.t_strat;
+            tech_data.t_superstruct = localStorage.t_superstruct;
+            tech_data.t_exploit = localStorage.t_exploit;
+            tech_data.t_terra = localStorage.t_terra;
+            tech_data.t_mos = localStorage.t_mos;
+            tech_data.t_mom = localStorage.t_mom;
+            tech_data.t_mot = localStorage.t_mot;
+            building_data.b_metal = localStorage.b_metal;
+            building_data.b_tritium = localStorage.b_tritium;
+            building_data.b_power = localStorage.b_power;
+            building_data.b_conc = localStorage.b_conc;
+            ships_data.s_mm = localStorage.s_mm;
+            ships_data.s_mconc = localStorage.s_mconc;
+            res.r_met = localStorage.r_met;
+            res.r_tri = localStorage.r_tri;
+            res.r_pps = localStorage.r_pps;
+            res.r_energy = localStorage.r_energy;
         } else {
-            tech_data.structure = 0;
-            tech_data.conv_weap = 0;
-            tech_data.conv_prop = 0;
-            tech_data.laser = 0;
-            tech_data.em_imp = 0;
-            tech_data.plasma = 0;
-            tech_data.hyper_prop = 0;
-            tech_data.energy = 0;
-            tech_data.secu = 0;
-            tech_data.spy = 0;
-            tech_data.data_proc = 0;
-            tech_data.quant_com = 0;
-            tech_data.cons = 0;
-            tech_data.strat = 0;
-            tech_data.superstruct = 0;
-            tech_data.exploit = 0;
-            tech_data.terra = 0;
-            tech_data.mos = 0;
-            tech_data.mom = 0;
-            tech_data.mot = 0;
-            building_data.metal = 0;
-            building_data.tritium = 0;
-            building_data.power = 0;
-            building_data.conc = 0;
-            ships_data.mm = 0
-            ships_data.mconc = 0;
-            res.met = 0;
-            res.tri = 0;
-            res.pps = 0;
-            res.energy = 0;
+            tech_data.t_struct = 0;
+            tech_data.t_conv_weap = 0;
+            tech_data.t_conv_prop = 0;
+            tech_data.t_laser = 0;
+            tech_data.t_em_imp = 0;
+            tech_data.t_plasma = 0;
+            tech_data.t_hyper_prop = 0;
+            tech_data.t_energy = 0;
+            tech_data.t_secu = 0;
+            tech_data.t_spy = 0;
+            tech_data.t_data_proc = 0;
+            tech_data.t_quant_com = 0;
+            tech_data.t_cons = 0;
+            tech_data.t_strat = 0;
+            tech_data.t_superstruct = 0;
+            tech_data.t_exploit = 0;
+            tech_data.t_terra = 0;
+            tech_data.t_mos = 0;
+            tech_data.t_mom = 0;
+            tech_data.t_mot = 0;
+            building_data.b_metal = 0;
+            building_data.b_tritium = 0;
+            building_data.b_power = 0;
+            building_data.b_conc = 0;
+            ships_data.s_mm = 0
+            ships_data.s_mconc = 0;
+            res.r_met = 0;
+            res.r_tri = 0;
+            res.r_pps = 0;
+            res.r_energy = 0;
             console.log("nothing in storage found, set data to basic")
         }
         initialStart = true;
@@ -220,49 +220,5 @@ function DATA_OnStart() {
 }
 
 
-function DATA_IncreaseLevelTech(qtt_level, el_to_up) {
-    tech_data[el_to_up] += parseInt(qtt_level);
-    UI_SetUIValues(tech_data, building_data, ships_data, res);
-}
 
-function DATA_IncreaseLevelBuildings(qtt_level, el_to_up) {
-    building_data[el_to_up] += parseInt(qtt_level);
-    UI_SetUIValues(tech_data, building_data, ships_data, res);
-}
-function DATA_IncreaseLevelShips(qtt_level, el_to_up) {
-    ships_data[el_to_up] += parseInt(qtt_level);
-    UI_SetUIValues(tech_data, building_data, ships_data, res);
-}
 
-function DATA_EstimatePriceTech(el_to_est, level_to_add) {
-    var current_level = tech_data[el_to_est];
-
-    var t_price_m = basePriceMet[el_to_est];
-    var t_price_t = basePricetri[el_to_est];
-    var t_price_p = basePricePp[el_to_est];
-    for (let i = 0; i <= current_level; i++) {
-        t_price_m = t_price_m * 1.7;
-        t_price_t = t_price_t * 1.7;
-        t_price_p = t_price_p * 1.7;
-    }
-
-    var origin_met_price = t_price_m;
-    var origin_tri_price = t_price_t;
-    var origin_pp_price = t_price_p;
-
-    for (let i = 0; i <= level_to_add - current_level; i++) {
-        t_price_m = t_price_m * 1.7;
-        t_price_t = t_price_t * 1.7;
-        t_price_p = t_price_p * 1.7;
-    }
-
-    var final_met_price = t_price_m;
-    var final_tri_price = t_price_t;
-    var final_pp_price = t_price_p;
-
-    if (res.met <= (final_met_price - origin_met_price) && res.tri <= (final_tri_price - origin_tri_price) && res.pp <= (final_pp_price - origin_pp_price)){
-        console.log("ok")
-    } else {
-        console.log("pas ok");
-    }
-}
